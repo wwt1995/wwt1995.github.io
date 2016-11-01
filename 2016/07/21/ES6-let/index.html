@@ -88,7 +88,7 @@
 let的用法类似于var 
 let只在声明了该变量的代码块内部才有效 以此let变量非常适合用于循环内部，作为一次性的变量来使用
 
-12345for (let i = 0;i&amp;lt;arr.length;i++)&amp;#123;&amp;#125;console.log(i)  // ==&amp;gt;因为i只能在for循环内部有效 此时的i为undefined">
+12345for (let i = 0;i&amp;lt;arr.length;i++)&amp;#123;&amp;#125;console.log(i)  //  因为i只能在for循环内部有效 此时的i为undefined">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6初体验---let">
 <meta property="og:url" content="http://yoursite.com/2016/07/21/ES6-let/index.html">
@@ -97,15 +97,15 @@ let只在声明了该变量的代码块内部才有效 以此let变量非常适�
 let的用法类似于var 
 let只在声明了该变量的代码块内部才有效 以此let变量非常适合用于循环内部，作为一次性的变量来使用
 
-12345for (let i = 0;i&amp;lt;arr.length;i++)&amp;#123;&amp;#125;console.log(i)  // ==&amp;gt;因为i只能在for循环内部有效 此时的i为undefined">
-<meta property="og:updated_time" content="2016-11-01T06:21:54.342Z">
+12345for (let i = 0;i&amp;lt;arr.length;i++)&amp;#123;&amp;#125;console.log(i)  //  因为i只能在for循环内部有效 此时的i为undefined">
+<meta property="og:updated_time" content="2016-11-01T06:58:37.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6初体验---let">
 <meta name="twitter:description" content="谈谈关于let
 let的用法类似于var 
 let只在声明了该变量的代码块内部才有效 以此let变量非常适合用于循环内部，作为一次性的变量来使用
 
-12345for (let i = 0;i&amp;lt;arr.length;i++)&amp;#123;&amp;#125;console.log(i)  // ==&amp;gt;因为i只能在for循环内部有效 此时的i为undefined">
+12345for (let i = 0;i&amp;lt;arr.length;i++)&amp;#123;&amp;#125;console.log(i)  //  因为i只能在for循环内部有效 此时的i为undefined">
 
 
 
@@ -326,19 +326,19 @@ let只在声明了该变量的代码块内部才有效 以此let变量非常适�
 <li>let的用法类似于var </li>
 <li>let只在声明了该变量的代码块内部才有效 以此let变量非常适合用于循环内部，作为一次性的变量来使用</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(i)  <span class="comment">// ==&gt;因为i只能在for循环内部有效 此时的i为undefined</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(i)  <span class="comment">//  因为i只能在for循环内部有效 此时的i为undefined</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 <ul>
 <li>let声明的变量不存在声明提升。并且只要这块作用域存在let声明，那么该变量就会绑定这个区域，外部无法访问该变量，且在该区域内使用let声明的变量只能访问该区域内声明的变量，无法访问到上一级作用域的同名变量。</li>
 <li>因此就会出现“暂时性死区”（temporal dead zone）</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tmp = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</div><div class="line">  <span class="built_in">console</span>.log(tmp);  <span class="comment">// ==&gt;此时会报错，因为let声明使tmp绑定了该作用域，并且不存在声明提前。</span></div><div class="line">  <span class="keyword">let</span> tmp;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</div><div class="line">  <span class="built_in">console</span>.log(tmp);  <span class="comment">// ==&gt;报错</span></div><div class="line">  tmp = <span class="number">1</span>;        <span class="comment">// ==&gt;报错</span></div><div class="line"></div><div class="line">  <span class="keyword">let</span> tmp;  </div><div class="line">  tmp = <span class="number">2</span>;        <span class="comment">// ==&gt; 2</span></div><div class="line">  <span class="built_in">console</span>.log(tmp);   <span class="comment">// ==&gt; 2</span></div><div class="line"></div><div class="line">  只要是在<span class="keyword">let</span>声明tmp之前的代码都会报错，都属于变量tmp的死区</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tmp = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</div><div class="line">  <span class="built_in">console</span>.log(tmp);  <span class="comment">//  此时会报错，因为let声明使tmp绑定了该作用域，并且不存在声明提前。</span></div><div class="line">  <span class="keyword">let</span> tmp;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</div><div class="line">  <span class="built_in">console</span>.log(tmp);  <span class="comment">//  报错</span></div><div class="line">  tmp = <span class="number">1</span>;        <span class="comment">// 报错</span></div><div class="line"></div><div class="line">  <span class="keyword">let</span> tmp;  </div><div class="line">  tmp = <span class="number">2</span>;        <span class="comment">//  2</span></div><div class="line">  <span class="built_in">console</span>.log(tmp);   <span class="comment">//  2</span></div><div class="line"></div><div class="line">  <span class="comment">//只要是在let声明tmp之前的代码都会报错，都属于变量tmp的死区</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li>let声明不允许变量的重复声明，会报错！ 不管是let声明的方式，还是var的声明方式，变量的重复声明都是一种非常不规范的代码习惯，都需要杜绝这种错误的变量使用方法。</li>
 </ul>
 <h2 id="关于let的块级作用域"><a href="#关于let的块级作用域" class="headerlink" title="关于let的块级作用域"></a>关于let的块级作用域</h2><p>块级作用域一般指的就是封闭的代码块，在内部的变量外界是无法访问的，最常见的块级作用域就是函数作用域。在ES6中，let为我们新增了一个块级作用域。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">let</span> arg = <span class="number">1</span>;</div><div class="line">  <span class="keyword">if</span>(<span class="literal">true</span>)&#123;</div><div class="line">    <span class="keyword">let</span> arg = <span class="number">2</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(arg);   <span class="comment">// ==&gt;此时输出结果为1，if语句中因为let声明产生了一块新的独立作用域，在fn函数无法访问到其内部的变量。</span></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">let</span> arg = <span class="number">1</span>;</div><div class="line">  <span class="keyword">if</span>(<span class="literal">true</span>)&#123;</div><div class="line">    <span class="keyword">let</span> arg = <span class="number">2</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(arg);   <span class="comment">//  此时输出结果为1，if语句中因为let声明产生了一块新的独立作用域，在fn函数无法访问到其内部的变量。</span></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
