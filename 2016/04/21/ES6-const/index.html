@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ES6,const,解构赋值," />
 
 
 
@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="Just For Fun！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hentai">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="constconst也用来声明变量，但是不同的是该声明只能声明常量，且一旦声明值就不能改变
+12345const num = 1;console.log(num);   // 1num = 2;console.log(num); // 1
+ps:const的作用域为声明所在的作用域，变量不存在声明提升，不可重复赋值。
+1234const arr = [];arr.push(&quot;hells&quot;);  /">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6初体验---const & 解构赋值">
+<meta property="og:url" content="http://yoursite.com/2016/04/21/ES6-const/index.html">
 <meta property="og:site_name" content="Hentai">
-<meta property="og:description" content="Just For Fun！">
+<meta property="og:description" content="constconst也用来声明变量，但是不同的是该声明只能声明常量，且一旦声明值就不能改变
+12345const num = 1;console.log(num);   // 1num = 2;console.log(num); // 1
+ps:const的作用域为声明所在的作用域，变量不存在声明提升，不可重复赋值。
+1234const arr = [];arr.push(&quot;hells&quot;);  /">
+<meta property="og:updated_time" content="2016-11-02T13:58:40.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hentai">
-<meta name="twitter:description" content="Just For Fun！">
+<meta name="twitter:title" content="ES6初体验---const & 解构赋值">
+<meta name="twitter:description" content="constconst也用来声明变量，但是不同的是该声明只能声明常量，且一旦声明值就不能改变
+12345const num = 1;console.log(num);   // 1num = 2;console.log(num); // 1
+ps:const的作用域为声明所在的作用域，变量不存在声明提升，不可重复赋值。
+1234const arr = [];arr.push(&quot;hells&quot;);  /">
 
 
 
@@ -110,7 +120,7 @@
   };
 </script>
 
-  <title> Hentai </title>
+  <title> ES6初体验---const & 解构赋值 | Hentai </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,9 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -252,10 +260,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/04/21/ES6-const/" itemprop="url">
-                  ES6初体验---const & 解构赋值
-                </a>
+                ES6初体验---const & 解构赋值
               
             
           </h1>
@@ -314,165 +319,86 @@
       
 
       
-        
-          <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>const也用来声明变量，但是不同的是该声明只能声明常量，且一旦声明值就不能改变</p>
+        <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>const也用来声明变量，但是不同的是该声明只能声明常量，且一旦声明值就不能改变</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> num = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(num);   <span class="comment">// 1</span></div><div class="line"></div><div class="line">num = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(num); <span class="comment">// 1</span></div></pre></td></tr></table></figure>
 <p>ps:const的作用域为声明所在的作用域，变量不存在声明提升，不可重复赋值。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [];</div><div class="line">arr.push(<span class="string">"hells"</span>);  <span class="comment">// 可以执行</span></div><div class="line">arr.length = <span class="number">1</span>;     <span class="comment">// 可以执行</span></div><div class="line">arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];      <span class="comment">// 会报错</span></div></pre></td></tr></table></figure>
 <p>在上面的代码中，使用const声明一个数组变量，给这个变量添加属性是可以的，但是给该变量赋值则不行。<br>因为const声明是指向变量所在的地址。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/21/ES6-const/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<a id="more"></a>
+<h2 id="变量的解构赋值"><a href="#变量的解构赋值" class="headerlink" title="变量的解构赋值"></a>变量的解构赋值</h2><p>只要等号两边的格式相同，就可以完成赋值。</p>
+<p>其实解构赋值的本质就是通过对象或者数组的结构方式来给变量赋值。</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]   <span class="comment">// 等同于var a = 1,b = 2,c = 3;</span></div><div class="line"></div><div class="line"><span class="comment">//更强大的是</span></div><div class="line"><span class="keyword">var</span> [num,[[exp],baz]] = [<span class="number">1</span>,[[<span class="number">2</span>],<span class="number">3</span>]];  <span class="comment">// 同样可以赋值。</span></div></pre></td></tr></table></figure>
+<p><strong>！！important</strong> </p>
+<ul>
+<li>变量的解构赋值只能用于数组和对象，如果是基本数据类型则会包装成基本包装类型，再进行解构。</li>
+<li>解构赋值可以指定默认值，但是不能为 null</li>
+</ul>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> &#123;height,weight&#125; = &#123;<span class="attr">height</span>:<span class="string">"170"</span>,<span class="attr">weight</span>:<span class="string">"60"</span>&#125;;</div><div class="line"><span class="comment">//对象的解构赋值与数组不同，不需要考虑顺序。此时赋值时，需要赋值的属性名必须一一对应。</span></div></pre></td></tr></table></figure>
+<p>如果变量名与属性名不一致，则需要这样写<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">foo</span>:<span class="string">"aaa"</span>,<span class="attr">bar</span>:<span class="string">"bbb"</span>&#125;;</div><div class="line"><span class="keyword">var</span> &#123;<span class="attr">foo</span>:f,<span class="attr">bar</span>:b&#125; = obj;</div><div class="line"><span class="built_in">console</span>.log(f,b);   <span class="comment">// "aaa"  "bbb" 冒号前为变量值对应的键，冒号后为变量名</span></div></pre></td></tr></table></figure></p>
+<p><strong>ps</strong>：对象形式的解构赋值同样可以指定默认值，不能为null</p>
+<p>还有一点需要注意的是,在解构赋值时不能讲花括号写在首行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;x&#125; = &#123;<span class="attr">x</span>:<span class="number">1</span>&#125;; <span class="comment">// 报错</span></div><div class="line"><span class="comment">//js的引擎会将&#123;&#125;视为一个代码块，而解构赋值为一个整体</span></div><div class="line">(&#123;x&#125; = &#123;<span class="attr">x</span>:<span class="number">1</span>&#125;); <span class="comment">// 正确</span></div></pre></td></tr></table></figure>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>字符串同样可以用于解构赋值。字符串在解构赋值时，被看做一个数组，并且还可以使用数组的length属性来赋值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [a,b,c] = <span class="string">"hel"</span>;</div><div class="line"><span class="keyword">var</span> &#123;<span class="attr">length</span>:len&#125; = <span class="string">"hel"</span>;</div><div class="line"><span class="built_in">console</span>.log(a);    <span class="comment">// "h"</span></div><div class="line"><span class="built_in">console</span>.log(b);    <span class="comment">// "e"</span></div><div class="line"><span class="built_in">console</span>.log(c);    <span class="comment">// "l"</span></div><div class="line"><span class="built_in">console</span>.log(len);  <span class="comment">// 3</span></div></pre></td></tr></table></figure>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数的参数也可以使用解构赋值的方式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">[x,y]</span>)</span>&#123;   </div><div class="line">  <span class="keyword">return</span> x + y;</div><div class="line">&#125;</div><div class="line"></div><div class="line">add([<span class="number">1</span>,<span class="number">2</span>]);    <span class="comment">//  3</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/12/ES6-let/" itemprop="url">
-                  ES6初体验---let
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-12T22:39:37+08:00" content="2016-04-12">
-              2016-04-12
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/ES6/" rel="tag">#ES6</a>
           
-
+            <a href="/tags/const/" rel="tag">#const</a>
           
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/解构赋值/" rel="tag">#解构赋值</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h2 id="谈谈关于let"><a href="#谈谈关于let" class="headerlink" title="谈谈关于let"></a>谈谈关于let</h2><ul>
-<li>let的用法类似于var </li>
-<li>let只在声明了该变量的代码块内部才有效 以此let变量非常适合用于循环内部，作为一次性的变量来使用</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(i)  <span class="comment">//  因为i只能在for循环内部有效 此时的i为undefined</span></div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/12/ES6-let/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/12/ES6-let/" rel="next" title="ES6初体验---let">
+                <i class="fa fa-chevron-left"></i> ES6初体验---let
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -480,6 +406,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -499,8 +429,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -570,6 +509,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的解构赋值"><span class="nav-number">2.</span> <span class="nav-text">变量的解构赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">2.1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">2.2.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">2.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">2.4.</span> <span class="nav-text">函数</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -673,6 +623,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
