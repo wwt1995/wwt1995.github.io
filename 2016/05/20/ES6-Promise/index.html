@@ -89,10 +89,7 @@ Promise对象代表一个异步操作，有三种状态：
 
 Pending （执行中）
 Resolved（已完成，又称Fulfilled）
-Rejected（已失败）
-
-只有异步操作的结果，可以决定当前是哪一种状态。
-有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。 此外，Pr">
+Rejected（已失败）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6初体验---Promise">
 <meta property="og:url" content="http://yoursite.com/2016/05/20/ES6-Promise/index.html">
@@ -102,11 +99,8 @@ Promise对象代表一个异步操作，有三种状态：
 
 Pending （执行中）
 Resolved（已完成，又称Fulfilled）
-Rejected（已失败）
-
-只有异步操作的结果，可以决定当前是哪一种状态。
-有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。 此外，Pr">
-<meta property="og:updated_time" content="2016-11-07T09:16:25.509Z">
+Rejected（已失败）">
+<meta property="og:updated_time" content="2016-11-07T09:18:28.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6初体验---Promise">
 <meta name="twitter:description" content="Promise对象从语法上说，Promise是一个对象，从它可以获取异步操作的结果。
@@ -114,10 +108,7 @@ Promise对象代表一个异步操作，有三种状态：
 
 Pending （执行中）
 Resolved（已完成，又称Fulfilled）
-Rejected（已失败）
-
-只有异步操作的结果，可以决定当前是哪一种状态。
-有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。 此外，Pr">
+Rejected（已失败）">
 
 
 
@@ -337,9 +328,9 @@ Rejected（已失败）
 <li>Resolved（已完成，又称Fulfilled）</li>
 <li>Rejected（已失败）</li>
 </ul>
+<a id="more"></a>
 <p>只有异步操作的结果，可以决定当前是哪一种状态。</p>
 <p>有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。 此外，Promise对象提供统一的接口，使得控制异步操作更加容易。</p>
-<a id="more"></a>
 <h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</div><div class="line">  fs.readFile(<span class="string">'./README.md'</span>,<span class="string">'utf-8'</span>,(err,data) =&gt; &#123;</div><div class="line">    <span class="keyword">if</span> (err) &#123;</div><div class="line">      <span class="comment">//容器中，异步任务失败后，就调用Promise中的reject方法，将错误对象传给reject。</span></div><div class="line">      <span class="keyword">return</span> reject(err);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    resolve(data);</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">  <span class="comment">//Promise对象一经创建，立即执行</span></div></pre></td></tr></table></figure>
 <h3 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all()"></a>Promise.all()</h3><p>Promise.all方法用于将多个Promise实例，包装成一个新的Promise实例。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> p = <span class="built_in">Promise</span>.all([p1, p2, p3]);</div><div class="line"></div><div class="line">p.then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
