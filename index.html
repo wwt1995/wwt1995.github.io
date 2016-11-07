@@ -253,6 +253,137 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/02/ES6-箭头函数/" itemprop="url">
+                  ES6初体验---箭头函数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-02T16:10:04+08:00" content="2016-05-02">
+              2016-05-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ES6中允许使用箭头（=&gt;）来定义函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">v</span> =&gt;</span> v;</div><div class="line"><span class="comment">//相当于</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>（<span class="title">v</span>）</span>&#123;</div><div class="line">  <span class="keyword">return</span> v；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果箭头函数不需要参数或者需要多个参数，需要使用圆括号代表参数部分。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="string">'hello world'</span>;  </div><div class="line"><span class="comment">//等同于</span></div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">'hello world'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> add = <span class="function">(<span class="params">num1,num2</span>) =&gt;</span> num1 + num2;</div><div class="line"><span class="comment">//等同于</span></div><div class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果箭头函数的代码块中语句多于一句语句，需要使用大括号将他们括起来，并且使用return返回。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">v</span> =&gt;</span> &#123;<span class="keyword">if</span>(<span class="literal">true</span>) <span class="keyword">return</span> v&#125;;</div></pre></td></tr></table></figure>
+<p>如果箭头函数的返回一个对象，需要在对象外套上括号。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">v</span> =&gt;</span> (&#123;<span class="attr">name</span>:v,<span class="attr">sayHi</span>:<span class="string">'hi'</span>&#125;);</div></pre></td></tr></table></figure>
+<p>箭头函数可以大大的简化代码，可以用于简化回调函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> v + <span class="number">1</span>;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line"> <span class="comment">// 使用箭头函数可以写成</span></div><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="function"><span class="params">v</span> =&gt;</span> v+<span class="number">1</span>);  <span class="comment">// 箭头函数的优势非常明显</span></div></pre></td></tr></table></figure>
+<p><strong>使用箭头函数需要注意</strong></p>
+<ul>
+<li>函数内部的this指向绑定定义时所在的对象，并且this的指向不可变。</li>
+<li>箭头函数不能够当做构造函数使用，直接会报错。</li>
+<li>函数内部不存在arguments参数对象。</li>
+</ul>
+<p>箭头函数同样可以用于多重嵌套</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;<span class="attr">into</span>:<span class="function"><span class="keyword">function</span> (<span class="params">array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;<span class="attr">after</span>:<span class="function"><span class="keyword">function</span> (<span class="params">afterv</span>)</span>&#123;</div><div class="line">      array.splice(array.indexOf(afterv) + <span class="number">1</span>, <span class="number">0</span> ,v);</div><div class="line">      <span class="keyword">return</span> array;</div><div class="line">      &#125;&#125;</div><div class="line">    &#125;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//可以简写成</span></div><div class="line"><span class="keyword">let</span> insert = <span class="function"><span class="params">value</span> =&gt;</span> (&#123;<span class="attr">into</span>: <span class="function">(<span class="params">array</span>) =&gt;</span> &#123;<span class="attr">after</span>: <span class="function">(<span class="params">afterv</span>) =&gt;</span> &#123;</div><div class="line">    array.splice(array.indexOf(afterv) + <span class="number">1</span>, <span class="number">0</span> ,v);</div><div class="line">    <span class="keyword">return</span> array;&#125;&#125;&#125;)</div></pre></td></tr></table></figure>
+<p>箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/21/ES6-const/" itemprop="url">
                   ES6初体验---const & 解构赋值
                 </a>
@@ -511,7 +642,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -528,7 +659,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

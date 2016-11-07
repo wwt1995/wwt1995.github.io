@@ -96,7 +96,7 @@ ps:const的作用域为声明所在的作用域，变量不存在声明提升，
 12345const num = 1;console.log(num);   // 1num = 2;console.log(num); // 1
 ps:const的作用域为声明所在的作用域，变量不存在声明提升，不可重复赋值。
 1234const arr = [];arr.push(&quot;hells&quot;);  /">
-<meta property="og:updated_time" content="2016-11-02T13:58:40.003Z">
+<meta property="og:updated_time" content="2016-11-03T12:07:34.813Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6初体验---const & 解构赋值">
 <meta name="twitter:description" content="constconst也用来声明变量，但是不同的是该声明只能声明常量，且一旦声明值就不能改变
@@ -342,6 +342,12 @@ ps:const的作用域为声明所在的作用域，变量不存在声明提升，
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [a,b,c] = <span class="string">"hel"</span>;</div><div class="line"><span class="keyword">var</span> &#123;<span class="attr">length</span>:len&#125; = <span class="string">"hel"</span>;</div><div class="line"><span class="built_in">console</span>.log(a);    <span class="comment">// "h"</span></div><div class="line"><span class="built_in">console</span>.log(b);    <span class="comment">// "e"</span></div><div class="line"><span class="built_in">console</span>.log(c);    <span class="comment">// "l"</span></div><div class="line"><span class="built_in">console</span>.log(len);  <span class="comment">// 3</span></div></pre></td></tr></table></figure>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数的参数也可以使用解构赋值的方式。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">[x,y]</span>)</span>&#123;   </div><div class="line">  <span class="keyword">return</span> x + y;</div><div class="line">&#125;</div><div class="line"></div><div class="line">add([<span class="number">1</span>,<span class="number">2</span>]);    <span class="comment">//  3</span></div></pre></td></tr></table></figure>
+<h3 id="解构赋值的几个应用场景"><a href="#解构赋值的几个应用场景" class="headerlink" title="解构赋值的几个应用场景"></a>解构赋值的几个应用场景</h3><p>1.变量的交换</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>,</div><div class="line">    b = <span class="number">2</span>;</div><div class="line">[a,b] = [b,a];</div><div class="line"><span class="comment">//可以用解构赋值的方式来交换a，b的值</span></div></pre></td></tr></table></figure>
+<p>2.函数返回多个值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> [a,b,c] = fn();</div></pre></td></tr></table></figure>
+<p>3.提取JSON对象（非常有用）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> json = &#123;<span class="attr">name</span>:<span class="string">"张三"</span>,<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">data</span>:[<span class="number">01</span>，<span class="number">29</span>]&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> &#123;name,age,<span class="attr">data</span>:num&#125; = json;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name,age,num);   <span class="comment">// "张三" 18 [01,29]</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -383,6 +389,10 @@ ps:const的作用域为声明所在的作用域，变量不存在声明提升，
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/02/ES6-箭头函数/" rel="prev" title="ES6初体验---箭头函数">
+                ES6初体验---箭头函数 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -450,7 +460,7 @@ ps:const的作用域为声明所在的作用域，变量不存在声明提升，
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -467,7 +477,7 @@ ps:const的作用域为声明所在的作用域，变量不存在声明提升，
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -516,7 +526,7 @@ ps:const的作用域为声明所在的作用域，变量不存在声明提升，
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的解构赋值"><span class="nav-number">2.</span> <span class="nav-text">变量的解构赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">2.1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">2.2.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">2.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">2.4.</span> <span class="nav-text">函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的解构赋值"><span class="nav-number">2.</span> <span class="nav-text">变量的解构赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">2.1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">2.2.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">2.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">2.4.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解构赋值的几个应用场景"><span class="nav-number">2.5.</span> <span class="nav-text">解构赋值的几个应用场景</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
