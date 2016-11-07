@@ -85,24 +85,18 @@
 
 
 <meta name="description" content="ES6中允许使用箭头（=&amp;gt;）来定义函数
-12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;
-如果箭头函数不需要参数或者需要多个参数，需要使用圆括号代表参数部分。
-1234567891011var foo = () =&amp;gt; &apos;hello world&apos;;  //等同于var foo = function()">
+12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6初体验---箭头函数">
 <meta property="og:url" content="http://yoursite.com/2016/05/02/ES6-箭头函数/index.html">
 <meta property="og:site_name" content="Hentai">
 <meta property="og:description" content="ES6中允许使用箭头（=&amp;gt;）来定义函数
-12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;
-如果箭头函数不需要参数或者需要多个参数，需要使用圆括号代表参数部分。
-1234567891011var foo = () =&amp;gt; &apos;hello world&apos;;  //等同于var foo = function()">
-<meta property="og:updated_time" content="2016-11-07T07:44:28.486Z">
+12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;">
+<meta property="og:updated_time" content="2016-11-07T07:54:27.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6初体验---箭头函数">
 <meta name="twitter:description" content="ES6中允许使用箭头（=&amp;gt;）来定义函数
-12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;
-如果箭头函数不需要参数或者需要多个参数，需要使用圆括号代表参数部分。
-1234567891011var foo = () =&amp;gt; &apos;hello world&apos;;  //等同于var foo = function()">
+12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;">
 
 
 
@@ -321,6 +315,7 @@
       
         <p>ES6中允许使用箭头（=&gt;）来定义函数</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">v</span> =&gt;</span> v;</div><div class="line"><span class="comment">//相当于</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>（<span class="title">v</span>）</span>&#123;</div><div class="line">  <span class="keyword">return</span> v；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>如果箭头函数不需要参数或者需要多个参数，需要使用圆括号代表参数部分。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="string">'hello world'</span>;  </div><div class="line"><span class="comment">//等同于</span></div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">'hello world'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> add = <span class="function">(<span class="params">num1,num2</span>) =&gt;</span> num1 + num2;</div><div class="line"><span class="comment">//等同于</span></div><div class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果箭头函数的代码块中语句多于一句语句，需要使用大括号将他们括起来，并且使用return返回。</p>
