@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ES6,箭头函数," />
+  <meta name="keywords" content="ES6,Promise," />
 
 
 
@@ -84,19 +84,40 @@
 
 
 
-<meta name="description" content="ES6中允许使用箭头（=&amp;gt;）来定义函数
-12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;">
+<meta name="description" content="Promise对象从语法上说，Promise是一个对象，从它可以获取异步操作的结果。
+Promise对象代表一个异步操作，有三种状态：
+
+Pending （执行中）
+Resolved（已完成，又称Fulfilled）
+Rejected（已失败）
+
+只有异步操作的结果，可以决定当前是哪一种状态。
+有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。 此外，Pr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6初体验---箭头函数">
-<meta property="og:url" content="http://yoursite.com/2016/05/02/ES6-fn/index.html">
+<meta property="og:title" content="ES6初体验---Promise">
+<meta property="og:url" content="http://yoursite.com/2016/04/12/ES6-Promise/index.html">
 <meta property="og:site_name" content="Hentai">
-<meta property="og:description" content="ES6中允许使用箭头（=&amp;gt;）来定义函数
-12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;">
-<meta property="og:updated_time" content="2016-11-07T08:37:01.550Z">
+<meta property="og:description" content="Promise对象从语法上说，Promise是一个对象，从它可以获取异步操作的结果。
+Promise对象代表一个异步操作，有三种状态：
+
+Pending （执行中）
+Resolved（已完成，又称Fulfilled）
+Rejected（已失败）
+
+只有异步操作的结果，可以决定当前是哪一种状态。
+有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。 此外，Pr">
+<meta property="og:updated_time" content="2016-11-07T09:14:43.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6初体验---箭头函数">
-<meta name="twitter:description" content="ES6中允许使用箭头（=&amp;gt;）来定义函数
-12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;">
+<meta name="twitter:title" content="ES6初体验---Promise">
+<meta name="twitter:description" content="Promise对象从语法上说，Promise是一个对象，从它可以获取异步操作的结果。
+Promise对象代表一个异步操作，有三种状态：
+
+Pending （执行中）
+Resolved（已完成，又称Fulfilled）
+Rejected（已失败）
+
+只有异步操作的结果，可以决定当前是哪一种状态。
+有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。 此外，Pr">
 
 
 
@@ -117,10 +138,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/05/02/ES6-fn/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/04/12/ES6-Promise/"/>
 
 
-  <title> ES6初体验---箭头函数 | Hentai </title>
+  <title> ES6初体验---Promise | Hentai </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -250,7 +271,7 @@
             
             
               
-                ES6初体验---箭头函数
+                ES6初体验---Promise
               
             
           </h1>
@@ -262,8 +283,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-02T16:10:04+08:00" content="2016-05-02">
-              2016-05-02
+            <time itemprop="dateCreated" datetime="2016-04-12T22:39:37+08:00" content="2016-04-12">
+              2016-04-12
             </time>
           </span>
 
@@ -309,26 +330,36 @@
       
 
       
-        <p>ES6中允许使用箭头（=&gt;）来定义函数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">v</span> =&gt;</span> v;</div><div class="line"><span class="comment">//相当于</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>（<span class="title">v</span>）</span>&#123;</div><div class="line">  <span class="keyword">return</span> v；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>如果箭头函数不需要参数或者需要多个参数，需要使用圆括号代表参数部分。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="string">'hello world'</span>;  </div><div class="line"><span class="comment">//等同于</span></div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">'hello world'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> add = <span class="function">(<span class="params">num1,num2</span>) =&gt;</span> num1 + num2;</div><div class="line"><span class="comment">//等同于</span></div><div class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如果箭头函数的代码块中语句多于一句语句，需要使用大括号将他们括起来，并且使用return返回。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">v</span> =&gt;</span> &#123;<span class="keyword">if</span>(<span class="literal">true</span>) <span class="keyword">return</span> v&#125;;</div></pre></td></tr></table></figure>
-<p>如果箭头函数的返回一个对象，需要在对象外套上括号。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">v</span> =&gt;</span> (&#123;<span class="attr">name</span>:v,<span class="attr">sayHi</span>:<span class="string">'hi'</span>&#125;);</div></pre></td></tr></table></figure>
-<p>箭头函数可以大大的简化代码，可以用于简化回调函数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> v + <span class="number">1</span>;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line"> <span class="comment">// 使用箭头函数可以写成</span></div><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="function"><span class="params">v</span> =&gt;</span> v+<span class="number">1</span>);  <span class="comment">// 箭头函数的优势非常明显</span></div></pre></td></tr></table></figure>
-<p><strong>使用箭头函数需要注意</strong></p>
+        <h2 id="Promise对象"><a href="#Promise对象" class="headerlink" title="Promise对象"></a>Promise对象</h2><p>从语法上说，Promise是一个对象，从它可以获取异步操作的结果。</p>
+<p>Promise对象代表一个异步操作，有三种状态：</p>
 <ul>
-<li>函数内部的this指向绑定定义时所在的对象，并且this的指向不可变。</li>
-<li>箭头函数不能够当做构造函数使用，直接会报错。</li>
-<li>函数内部不存在arguments参数对象。</li>
+<li>Pending （执行中）</li>
+<li>Resolved（已完成，又称Fulfilled）</li>
+<li>Rejected（已失败）</li>
 </ul>
-<p>箭头函数同样可以用于多重嵌套</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;<span class="attr">into</span>:<span class="function"><span class="keyword">function</span> (<span class="params">array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;<span class="attr">after</span>:<span class="function"><span class="keyword">function</span> (<span class="params">afterv</span>)</span>&#123;</div><div class="line">      array.splice(array.indexOf(afterv) + <span class="number">1</span>, <span class="number">0</span> ,v);</div><div class="line">      <span class="keyword">return</span> array;</div><div class="line">      &#125;&#125;</div><div class="line">    &#125;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//可以简写成</span></div><div class="line"><span class="keyword">let</span> insert = <span class="function"><span class="params">value</span> =&gt;</span> (&#123;<span class="attr">into</span>: <span class="function">(<span class="params">array</span>) =&gt;</span> &#123;<span class="attr">after</span>: <span class="function">(<span class="params">afterv</span>) =&gt;</span> &#123;</div><div class="line">    array.splice(array.indexOf(afterv) + <span class="number">1</span>, <span class="number">0</span> ,v);</div><div class="line">    <span class="keyword">return</span> array;&#125;&#125;&#125;)</div></pre></td></tr></table></figure>
-<p>箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。</p>
+<p>只有异步操作的结果，可以决定当前是哪一种状态。</p>
+<p>有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。 此外，Promise对象提供统一的接口，使得控制异步操作更加容易。</p>
+<a id="more"></a>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</div><div class="line">  fs.readFile(<span class="string">'./README.md'</span>,<span class="string">'utf-8'</span>,(err,data) =&gt; &#123;</div><div class="line">    <span class="keyword">if</span> (err) &#123;</div><div class="line">      <span class="comment">//容器中，异步任务失败后，就调用Promise中的reject方法，将错误对象传给reject。</span></div><div class="line">      <span class="keyword">return</span> reject(err);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    resolve(data);</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">  <span class="comment">//Promise对象一经创建，立即执行</span></div></pre></td></tr></table></figure>
+<h3 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all()"></a>Promise.all()</h3><p>Promise.all方法用于将多个Promise实例，包装成一个新的Promise实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> p = <span class="built_in">Promise</span>.all([p1, p2, p3]);</div><div class="line"></div><div class="line">p.then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Promise.all方法接受一个数组作为参数，p1、p2、p3都是Promise对象的实例。</p>
+<p>p的状态由p1、p2、p3决定，分成两种情况：</p>
+<ul>
+<li><p>只有p1、p2、p3的状态都变成fulfilled ，p的状态才会变成fulfilled</p>
+<ul>
+<li>此时p1、p2、p3的返回值组成一个数组，传递给p的回调函数。</li>
+</ul>
+</li>
+<li><p>只要p1、p2、p3之中有一个被rejected，p的状态就变成rejected</p>
+<ul>
+<li>此时第一个被reject的实例的返回值，会传递给p的回调函数。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Promise-race"><a href="#Promise-race" class="headerlink" title="Promise.race()"></a>Promise.race()</h3><p>Promise.race方法同样是将多个Promise实例，包装成一个新的Promise实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> p = <span class="built_in">Promise</span>.race([p1,p2,p3]);</div></pre></td></tr></table></figure>
+<p>上面代码中，只要p1、p2、p3之中有一个实例率先改变状态，p的状态就跟着改变。 那个率先改变的Promise实例的返回值，就传递给p的回调函数。</p>
 
       
     </div>
@@ -353,7 +384,7 @@
           
             <a href="/tags/ES6/" rel="tag">#ES6</a>
           
-            <a href="/tags/箭头函数/" rel="tag">#箭头函数</a>
+            <a href="/tags/Promise/" rel="tag">#Promise</a>
           
         </div>
       
@@ -362,13 +393,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/21/ES6-const/" rel="next" title="ES6初体验---const & 解构赋值">
-                <i class="fa fa-chevron-left"></i> ES6初体验---const & 解构赋值
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/12/ES6-let/" rel="prev" title="ES6初体验---let">
+                ES6初体验---let <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -502,7 +533,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise对象"><span class="nav-number">1.</span> <span class="nav-text">Promise对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本使用"><span class="nav-number">2.</span> <span class="nav-text">基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise-all"><span class="nav-number">2.1.</span> <span class="nav-text">Promise.all()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise-race"><span class="nav-number">2.2.</span> <span class="nav-text">Promise.race()</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
