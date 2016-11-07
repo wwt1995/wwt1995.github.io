@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="Hentai">
 <meta property="og:description" content="ES6中允许使用箭头（=&amp;gt;）来定义函数
 12345var foo = v =&amp;gt; v;//相当于function foo（v）&amp;#123;  return v；&amp;#125;">
-<meta property="og:updated_time" content="2016-11-07T08:36:02.750Z">
+<meta property="og:updated_time" content="2016-11-07T08:37:01.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6初体验---箭头函数">
 <meta name="twitter:description" content="ES6中允许使用箭头（=&amp;gt;）来定义函数
@@ -332,7 +332,8 @@
 </ul>
 <p>箭头函数同样可以用于多重嵌套</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;<span class="attr">into</span>:<span class="function"><span class="keyword">function</span> (<span class="params">array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;<span class="attr">after</span>:<span class="function"><span class="keyword">function</span> (<span class="params">afterv</span>)</span>&#123;</div><div class="line">      array.splice(array.indexOf(afterv) + <span class="number">1</span>, <span class="number">0</span> ,v);</div><div class="line">      <span class="keyword">return</span> array;</div><div class="line">      &#125;&#125;</div><div class="line">    &#125;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//可以简写成</span></div><div class="line"><span class="keyword">let</span> insert = <span class="function"><span class="params">value</span> =&gt;</span> (&#123;<span class="attr">into</span>: <span class="function">(<span class="params">array</span>) =&gt;</span> &#123;<span class="attr">after</span>: <span class="function">(<span class="params">afterv</span>) =&gt;</span> &#123;</div><div class="line">    array.splice(array.indexOf(afterv) + <span class="number">1</span>, <span class="number">0</span> ,v);</div><div class="line">    <span class="keyword">return</span> array;&#125;&#125;&#125;)</div></pre></td></tr></table></figure>
-<h3 id="箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。"><a href="#箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。" class="headerlink" title="箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。"></a>箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。</h3>
+<p>箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。</p>
+
       
     </div>
 
@@ -504,7 +505,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。"><span class="nav-number">1.</span> <span class="nav-text">箭头函数是一种更加优雅的代码书写格式，使得代码的可读性更高，代码不再冗余，是一种简单高效的开发方式。</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
